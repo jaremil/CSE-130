@@ -12,7 +12,6 @@ while guess_message != random_int:
     tally_guess += 1
     list_guess = []
     if guess_message > random_int:
-
         print("   Too high!")
         guess_message = int(input(f"Guess a number between 1 and {positive_int}: "))
     elif guess_message < random_int:
