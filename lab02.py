@@ -1,17 +1,27 @@
 # 1. Name:
-#      -your name-
+
+#      Jade Miller
+
 # 2. Assignment Name:
+
 #      Lab 02: Authentication
+
 # 3. Assignment Description:
-#      -describe what this program is meant to do-
+
+#      This prgram is designed to compare a username and a password listed in a Json file. It does this through reading the file from it's location in my computer's files. There are errors prepared to keep the code from crashing if something goes wrong.
+
 # 4. What was the hardest part? Be as specific as possible.
-#      -a paragraph or two about how the assignment went for you-
 # Was the syntax of Python the hardest part? If so, what part?
 # Was there some aspect of the problem that was particularly difficult to solve?
 # Was there an especially difficult bug? If so, how did you resolve it?
 # Was there some difficulty with the instructions or any part of the problem definition?
+
+#   I struggled the most with the syntax of Python. The hardest part of the program for me as using try and except. I had to do research into what errors to have it look for. I had also forgotten about try so I needed to do a lot of research to find what I needed to do.
+
 # 5. How long did it take for you to complete the assignment?
 #      -total time in hours including reading the assignment and submitting the program-
+
+# 3 hours
 
 import json
 
