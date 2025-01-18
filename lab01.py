@@ -1,17 +1,20 @@
 # 1. Name:
-#      -your name-
+#     Jade Miller
 # 2. Assignment Name:
 #      Lab 01: Guessing Game
 # 3. Assignment Description:
-#      -describe what this program is meant to do-
+#      This program allows the user to choose and guess a number.
 # 4. What was the hardest part? Be as specific as possible.
 #      -a paragraph or two about how the assignment went for you-
 # Was the syntax of Python the hardest part? If so, what part?
 # Was there some aspect of the problem that was particularly difficult to solve?
 # Was there an especially difficult bug? If so, how did you resolve it?
 # Was there some difficulty with the instructions or any part of the problem definition?
+#  The syntax of Python was the most difficult. It had been awhile since I have coded in Python. Other then that I did not have any difficulty with this project.
+
 # 5. How long did it take for you to complete the assignment?
 #      -total time in hours including reading the assignment and submitting the program-
+# 2 hours
 
 import random
 
