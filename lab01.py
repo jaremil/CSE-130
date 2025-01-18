@@ -1,3 +1,18 @@
+# 1. Name:
+#      -your name-
+# 2. Assignment Name:
+#      Lab 01: Guessing Game
+# 3. Assignment Description:
+#      -describe what this program is meant to do-
+# 4. What was the hardest part? Be as specific as possible.
+#      -a paragraph or two about how the assignment went for you-
+# Was the syntax of Python the hardest part? If so, what part?
+# Was there some aspect of the problem that was particularly difficult to solve?
+# Was there an especially difficult bug? If so, how did you resolve it?
+# Was there some difficulty with the instructions or any part of the problem definition?
+# 5. How long did it take for you to complete the assignment?
+#      -total time in hours including reading the assignment and submitting the program-
+
 import random
 
 print("\nThis is the guess a number game.\nYou try to guess a random number in the smallest number of attempts.")
