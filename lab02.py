@@ -37,7 +37,7 @@ except FileNotFoundError:
 except OSError:
     print("Unable to open file Lab02.json.")
 
-separated_list = list(json_data.values())
+# separated_list = list(json_data.values())
 
 # print("Separated List:", separated_list)
 
