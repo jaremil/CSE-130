@@ -9,6 +9,8 @@
 # 5. How long did it take for you to complete the assignment?
 #      5 hours
 
+
+# Checking green properties
 while True:
     user_land  = input('Do you own all the green properties? (y/n) ')
 
@@ -19,12 +21,14 @@ while True:
     elif user_land in "yY":
         break
 
+# Checking Pacific Avenue
 on_pac = int(input('What is on Pacific Avenue? (0:nothing, 1:one house, ... 5:a hotel) '))
 
 if on_pac < 5:
     available_houses = int(input('How many houses are there to purchase? '))
     if on_pac + available_houses >= 4:
-        pass
+        needed_houses = 4 - on_pac
+        pac_houses = needed_houses 
     else:
         print(f"There are not enough houses available for purchase at this time.")
         quit()
@@ -35,12 +39,47 @@ else:
     print("Invalid command.")
     quit()
 
+# Checking North Carolina Avenue
+on_nor = int(input('What is on North Carolina Avenue? (0:nothing, 1:one house, ... 5:a hotel) '))
+
+if on_nor < 5:
+    available_houses = int(input('How many houses are there to purchase? '))
+    if on_nor + available_houses >= 4:
+        needed_houses = 4 - on_nor
+        nor_houses = needed_houses
+    else:
+        print(f"There are not enough houses available for purchase at this time.")
+        quit()
+elif on_nor == 5:
+    print(f"Swap North Carolina's hotel with Pennsylvania's 4 houses.")
+    quit()
+else:
+    print("Invalid command.")
+    quit()
+
+# Checking Pennsylvania Avenue
+on_pen =  int(input('What is on Pennsylvania Avenue? (0:nothing, 1:one house, ... 5:a hotel) '))
+
+if on_pen < 5:
+    available_houses = int(input('How many houses are there to purchase? '))
+    if on_pen + available_houses >= 4:
+        needed_houses = 4 - on_pen
+        pen_houses = needed_houses
+    else:
+        print(f"There are not enough houses available for purchase at this time.")
+        quit()
+elif on_pen == 5:
+    print(f"Swap Pacific's hotel with Pennsylvania's 4 houses.")
+    quit()
+else:
+    print("Invalid command.")
+    quit()
+
+# Buying
 user_cash = int(input('How much cash do you have to spend? $'))
-needed_houses = 4 - on_pac
 
 if user_cash >= 200 * needed_houses:
     user_cash = user_cash -  200 * needed_houses
-    pass
 else:
     print(f"You do not have sufficient funds to purchase a hotel at this time.")
     quit()
@@ -48,7 +87,7 @@ else:
 available_hotels  = int(input('How many hotels are there to purchase? '))
 if available_hotels >= 1:
     if user_cash >= 200:
-        print("Purchase????????????")
+        pass
     else:
         print(f"You do not have sufficient funds to purchase a hotel at this time.")
         quit()
@@ -56,31 +95,11 @@ else:
     print(f"There are not enough hotels available for purchase at this time.")
     quit()
 
+# Purchasing message
+purchase_a = print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut [number of houses] house(s) on North Carolina.\nPut [number of houses] house(s) on Pacific.")
 
-# on_nor = int(input('What is on North Carolina Avenue? (0:nothing, 1:one house, ... 5:a hotel) '))
+purchase_b = print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut [number of houses] house(s) on North Carolina.")
 
-# on_pen =  int(input('What is on Pennsylvania Avenue? (0:nothing, 1:one house, ... 5:a hotel) '))
+purchase_c = print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut [number of houses] house(s) on Pacific.")
 
-# # Out: Swap NC
-
-# print(f"Swap North Carolina's hotel with Pennsylvania's 4 houses.")
-
-# # Out: Swap PC
-
-# print(f"Swap Pacific's hotel with Pennsylvania's 4 houses.")
-
-# # Out: Purchase A
-
-# print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut [number of houses] house(s) on North Carolina.\nPut [number of houses] house(s) on Pacific.")
-
-# # Out: Purchase B
-
-# print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut [number of houses] house(s) on North Carolina.")
-
-# # Out: Purchase C
-
-# print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut [number of houses] house(s) on Pacific.")
-
-# # Out: Purchase D
-
-# print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.")
+purchase_d = print(f"This will cost $[price].\nPurchase 1 hotel and [number of houses] house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.")
