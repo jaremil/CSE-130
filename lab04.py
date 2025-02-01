@@ -48,7 +48,7 @@ if on_pac < 5:
                         print(f"There are not enough houses available for purchase at this time.")
                         quit()
                 elif on_pen == 5:
-                    print(f"Swap Pacific's hotel with Pennsylvania's 4 houses.")
+                    print(f"You cannot purchase a hotel if the property already has one.")
                     quit()
                 else:
                     print("Invalid command.")
@@ -66,7 +66,7 @@ if on_pac < 5:
         print(f"There are not enough houses available for purchase at this time.")
         quit()
 elif on_pac == 5:
-    print(f"You cannot purchase a hotel if the property already has one.")
+    print(f"Swap Pacific's hotel with Pennsylvania's 4 houses.")
     quit()
 else:
     print("Invalid command.")
@@ -96,13 +96,13 @@ price = (200 * needed_houses) + 200
 
 # Checking Pennsylvania Avenue
 if needed_nor >= 1 and needed_onpac >= 1:
-    purchase_a = print(f"This will cost ${price}.\nPurchase 1 hotel and ${needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut ${needed_nor} house(s) on North Carolina.\nPut ${needed_onpac} house(s) on Pacific.")
+    purchase_a = print(f"This will cost ${price}.\nPurchase 1 hotel and ${needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut {needed_nor} house(s) on North Carolina.\nPut {needed_onpac} house(s) on Pacific.")
 
 elif needed_nor >= 1 and needed_onpac == 0:
-    purchase_b = print(f"This will cost ${price}.\nPurchase 1 hotel and ${needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut ${needed_nor} house(s) on North Carolina.")
+    purchase_b = print(f"This will cost ${price}.\nPurchase 1 hotel and {needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut {needed_nor} house(s) on North Carolina.")
 
 elif needed_nor == 0 and needed_onpac >= 1:
-    purchase_c = print(f"This will cost ${price}.\nPurchase 1 hotel and ${needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut ${needed_onpac} house(s) on Pacific.")
+    purchase_c = print(f"This will cost ${price}.\nPurchase 1 hotel and {needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.\nPut {needed_onpac} house(s) on Pacific.")
 
 elif needed_nor == 0 and needed_onpac == 0:
-    purchase_d = print(f"This will cost ${price}.\nPurchase 1 hotel and ${needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.")
+    purchase_d = print(f"This will cost ${price}.\nPurchase 1 hotel and {needed_houses} house(s).\nPut 1 hotel on Pennsylvania and return any houses to the bank.")
