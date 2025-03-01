@@ -29,3 +29,18 @@ with open('jan16_class.json', "rt") as filehandle:
     print(data)
     data_dictionary = json.loads(data)
     print(data_dictionary['name'] + 'worked!!')
+
+
+
+
+
+
+
+
+
+# for(i = 1; i < length; i++) 
+#     asserts(array[i -1 <= array[i]]);
+
+# python version??
+# for i in range(1, len(array)):
+#     assert array[i - 1] <= array[i], "Array is not sorted!"
