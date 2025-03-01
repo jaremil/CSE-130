@@ -9,33 +9,56 @@
 # 5. How long did it take for you to complete the assignment?
 #      4
 
-import json 
+import json
 
-with open('Lab08.empty.json', 'r') as file:
-    empty_data = json.load(file)
-with open('Lab08.cities.json', 'r') as file:
-    cities_data = json.load(file)
-with open('Lab08.languages.json', 'r') as file:
-    languages_data = json.load(file)
-with open('Lab08.trivial.json', 'r') as file:
-    trivial_data = json.load(file)
-with open('Lab08.states.json', 'r') as file:
-    states_data = json.load(file)
+with open('Lab08.empty.json', 'rt') as file:
+    data = file.read()
+    empty_data = json.loads(data)
+    empty_array = empty_data['array']
 
-print(empty_data)
-print(cities_data)
-print(languages_data)
-print(trivial_data)
-print(states_data)
+with open('Lab08.cities.json', 'rt') as file:
+    data = file.read()
+    cities_data = json.loads(data)
+    cities_array = cities_data['array']
 
-# FOR i_pivot <- array.length-1 ...0
+with open('Lab08.languages.json', 'rt') as file:
+    data = file.read()
+    languages_data = json.loads(data)
+    languages_array = languages_data['array']
 
-#     i_largest <- 0
+with open('Lab08.trivial.json', 'rt') as file:
+    data = file.read()
+    trivial_data = json.loads(data)
+    trivial_array = trivial_data['array']
 
-#     FOR i_check <- 1 ... i_pivot-1
-    #       IF array[i_check] > array[i_largest]
-    #           i_largest <- i_check
-    #   IF array[i_largest] > array[i_pivot]
-    #       SWAP array[i_largest] and array[i_pivot]
-      
-for 
+with open('Lab08.states.json', 'rt') as file:
+    data = file.read()
+    states_data = json.loads(data)
+    states_array = states_data['array']
+
+
+def sort(array):
+    unsorted = len(array)
+
+    while unsorted > 1:
+        largest = array[0]
+        largest_index = 0
+
+        for i in range(1, unsorted):
+            if array[i] > largest:
+                largest = array[i]
+                largest_index = i
+
+        array[largest_index], array[unsorted -
+                                    1] = array[unsorted - 1], array[largest_index]
+
+        unsorted -= 1
+
+    return array
+
+
+print(sort(empty_array))
+print(sort(cities_array))
+print(sort(languages_array))
+print(sort(trivial_array))
+print(sort(states_array))
